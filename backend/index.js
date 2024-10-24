@@ -18,11 +18,7 @@ connectDB().catch((err) => {
 
 app.use(express.json());
 app.use((req, res, next) => {
-	res.setHeader(
-		"Access-Control-Allow-Origin",
-		// "https://todoappwithauthentication.vercel.app"
-		"http://localhost:5173"
-	);
+	res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
 	res.setHeader(
 		"Access-Control-Allow-Headers",
 		"Origin, X-Requested-With, Content-Type, Accept, Authorization"
